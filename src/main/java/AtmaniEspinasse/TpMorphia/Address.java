@@ -3,12 +3,10 @@ package AtmaniEspinasse.TpMorphia;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
-import org.mongodb.morphia.annotations.Property;
 
 @Entity
 public class Address {
 	@Id
-	@Property("id")
 	private ObjectId id;
 	private String street;
 	private String city;
