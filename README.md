@@ -3,8 +3,7 @@
 #### Binôme : Atmani_Espinasse
 
 
-#### Partie 1 API Morphia
-####  Sujet
+#### MongoDB
 Réaliser une application simple en utilisant une API comme Morphia proche de JPA en se plaçant dans un cadre classique de développement au dessus d’une base orientée document comme Mongo.
 
 *  Installer la base de données MongoDB, lancer la base de donnée.
@@ -12,8 +11,7 @@ Réaliser une application simple en utilisant une API comme Morphia proche de JP
 
   #### Le modèle métier du tp
   
-![tp3](https://user-images.githubusercontent.com/31792531/37434409-c3723666-27df-11e8-961a-40b3b0dfdb74.png)
-
+ ![Modèle métier du tp](sir/tp3.png)
  
  * Implémentation de ce modèle en utilisant les différentes annotations Morphia, Ces annotations nous permettent de réaliser le mapping des données de la même manière que nous premet de le faire JPA .
 
@@ -78,11 +76,21 @@ Contient 3 variables dont id de type **ObjectId** qui sert d'identifiant unique 
 ```
 
 #### La classe App.java
-Classe principale qui nous permet de manipuler les données dans la bdd via la librairie Morphia.
-
-
+Classe principale qui nous permet de manipuler les données dans la bdd via la librairie Morphia. (la classe à lancer pour tester la partie MongoDB)
 
 ### Questions: Quelles sont les limites d’une base données orientées document ?
+* Intergrité des données: dû au fait que le développeur peut facilement insérer des données de qualité variable dans n'importe quelle collection, ce qui implique un risque d'avoir des structures de documents mal définie ou obsolètes.
+* Les requêtes qu'on peut effectuer sur cette base sont moins fortes qu'en SQL classique ce qui limite les requêtes complexes par rapport à une base relationnelle.
 
-### Questions: Quelles sont les types de données stockés dans Redis, que peut on
-faire comme types de requêtes ?
+#### Redis
+#### La classe App.java
+Classe qui définie toutes les opérations concernant Redis
+### Questions: Quelles sont les types de données stockés dans Redis, que peut on faire comme types de requêtes ?
+* Redis est une base de données orientée clefs-valeurs. Elle permet de manipuler des types de données simples : String, Listes, Hash, Sets et Sets triés.
+
+On peut effectuer différents types de requêtes (insérer, mettre à jour, filtrer) avec Redis, ces dernieres dépendent de chaque structure de données.
+* INCR :incrémenter un nombre contenu dans une clé
+* SET : ajouter  une valeur 
+* GET :  voir les valeurs d'une clé
+* DEL : supprimer une valeur
+
