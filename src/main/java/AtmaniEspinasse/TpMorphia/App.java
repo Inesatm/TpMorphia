@@ -118,7 +118,6 @@ public class App {
 		datastore.save(article);
 		datastore.save(article1);
 		datastore.save(article2);
-
 		for (Article e : datastore.find(Article.class))
 			System.err.println(e.toString());
 	}
